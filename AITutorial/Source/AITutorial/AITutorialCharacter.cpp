@@ -50,6 +50,7 @@ void AAITutorialCharacter::SetupPlayerInputComponent(class UInputComponent* Inpu
 	check(InputComponent);
 	InputComponent->BindAction("Jump", IE_Pressed, this, &ACharacter::Jump);
 	InputComponent->BindAction("Jump", IE_Released, this, &ACharacter::StopJumping);
+	InputComponent->BindAction("Activate", IE_Pressed, this, &AAITutorialCharacter::MakeSound);
 
 	InputComponent->BindAxis("MoveForward", this, &AAITutorialCharacter::MoveForward);
 	InputComponent->BindAxis("MoveRight", this, &AAITutorialCharacter::MoveRight);
@@ -124,4 +125,10 @@ void AAITutorialCharacter::MoveRight(float Value)
 		// add movement in that direction
 		AddMovementInput(Direction, Value);
 	}
+}
+
+void AAITutorialCharacter::MakeSound()
+{
+	UGameplayStatics::PlaySoundAtLocation(GetWorld(), Sound, GetActorLocation());
+	MakeNoise(1, this, GetActorLocation());
 }
