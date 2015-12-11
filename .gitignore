@@ -1,0 +1,38 @@
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+
+# Fortran module files
+*.mod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+# UE4 Specific Ignores
+AITutorial/Intermediate/
+AITutorial/Saved/
+AITutorial/Build/
+AITutorial/*.sdf
+AITutorial/*.sln
+AITutorial/*.v12.suo
+*.pdb
+AITutorial/Binaries/Win64/UE4Editor-FirstPersonInput.dll
+AITutorial/Source/FirstPersonInput/EnemyInteractable.h
